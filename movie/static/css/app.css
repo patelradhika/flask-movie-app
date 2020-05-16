@@ -1,0 +1,64 @@
+.result {
+    padding: 50px;
+    height: auto;
+}
+
+.card {
+    background-color: black;
+}
+
+.movies-image {
+    height: 400px;
+}
+
+.movies-title {
+    max-height: 30px;
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.movies-star {
+    z-index: 9998;
+    color: orange;
+    top: 20%;
+    left: 50%;
+    font-size: 2rem;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.movies-rating {
+    z-index: 9998;
+    color: white;
+    top: 30%;
+    left: 50%;
+    font-size: 2rem;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.movies-detail {
+    z-index: 9998;
+    color: white;
+    background-color: orange;
+    left: 50%;
+    bottom: 30%;
+    font-size: 1.2rem;
+    font-weight: bold;
+	text-decoration: none;
+    text-align: center;
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+}
+
+.movies-detail:hover {
+	background: rgb(245, 165, 0);
+    cursor: pointer;
+}
