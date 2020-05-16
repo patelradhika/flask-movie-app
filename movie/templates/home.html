@@ -32,12 +32,14 @@
                         <div class="card">
                             <i class="movies-star fa fa-star hide"></i>
                             <p class="movies-rating hide">{{ movie.rating }}/5.0</p>
-                            <button type="button" class="movies-detail hide">View Details</button>
+                            <button type="button" class="movies-detail hide" data-toggle="modal" data-target="#modal-detail-{{movie.id}}">View Details</button>
 
                             <img class="movies-image" src="{{ movie.pic }}" alt="" />
                             <p class="movies-title">{{ movie.name }}</p>
                         </div>
                     </div>
+
+                    {% include 'modal-detail.html' %}
                 {% endfor %}
             </div>
         </div>
