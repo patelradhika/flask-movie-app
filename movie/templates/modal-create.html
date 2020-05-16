@@ -1,0 +1,42 @@
+<div class="modal" id="modal-create">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Movie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <form action="{{ url_for('core.create') }}" method="POST">
+                {{ Create.hidden_tag() }}
+                <div class="modal-body">
+                    <div class="form-group">
+                        {{ Create.name.label }}
+                        {{ Create.name(class="form-control", placeholder="Movie") }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ Create.pic.label }}
+                        {{ Create.pic(class="form-control", placeholder="Image URL") }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ Create.rating.label }}
+                        {{ Create.rating(class="form-control", placeholder="1-5") }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ Create.notes.label }}
+                        {{ Create.notes(class="form-control") }}
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    {{ Create.create(class="btn btn-primary") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
