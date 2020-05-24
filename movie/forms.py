@@ -19,4 +19,4 @@ class MovieForm(FlaskForm):
     pic = StringField("Picture")
     rating = FloatField("Rating", validators=[DataRequired(), NumberRange(1,5)])
     notes = TextAreaField("Movie Notes")
-    create = SubmitField("Create")
+    submit = SubmitField()
