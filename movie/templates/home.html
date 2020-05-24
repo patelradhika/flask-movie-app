@@ -25,6 +25,16 @@
         </nav>
 
         <div class="result">
+            <!-- Alert messages -->
+            {% for message in get_flashed_messages(with_categories=true) %}
+                <div class="alert alert-{{message.0}}" role="alert">
+                    {{message.1}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+            {% endfor %}
+
             <!-- Show all movies -->
             <div class="row">
                 {% for movie in movies %}
