@@ -77,3 +77,15 @@ def edit(id):
         return redirect(url_for('core.home'))
     else:
         return redirect(url_for('core.home'))
+
+
+@core.route('/delete/<int:id>', methods=['POST'])
+def delete(id):
+    if request.method == 'POST':
+        movie = Movies.query.get(id)
+        db.session.delete(movie)
+        db.session.commit()
+
+        return redirect(url_for('core.home'))
+    else:
+        return redirect(url_for('core.home'))
